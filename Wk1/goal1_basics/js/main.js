@@ -1,9 +1,10 @@
+
 /*
      Name:
      Date:
      Class & Section:  PWA1-####
      Comments: "Goal 1: Review of WPF"
- */
+*/
 
 // self-executing function
 
@@ -50,70 +51,131 @@
 */
 // variables
 console.log('------ variables ----------');
+/*
+var lastName = "bond";
+var _ID;
+var $name;
+var name007;
 
+var myName, course, month;
+
+var someName, funMonth="June", day5;
+
+var a = b = c = d = 10;
+*/
     //example 1: variables defined properly
-
+var exName = "james", course = "PWA1", month = 3;
+console.log("name: ", exName + " / course: ", course + " / month: ", month);
 
     //example 2: variables not defined will = "undefined"
-
+var goodName, goodCourse, goodMonth;
+console.log("name: ", goodName + " / course: ", goodCourse + " / month: ", goodMonth);
 
     //example 3: a mix of variables defined and not defined
-
+var happyName, happyCourse = "PWA1", happyMonth;
+console.log("name: ", happyName + " / course: ", happyCourse + " / month: ", happyMonth);
 
     //example 4: declaring multiple variables at once w/ same value
-
+var a = b = c = d = 10;
+console.log("a: ", a + " / b: ", b + " / c: ", c + " / d: ", d);
 
 
 // string (definition, concatenation, escape character)
+// string literal: "any character set can go here"
+// numeric literal: 0, 130, 42, 3.145, 20.1, 6.02e23
+// boolean literal: true or false
+// array literal: [1, true, "3"]
+// function literal: function(){statements;}
 console.log('------ strings ----------');
 
-    //basic string
+var name = "James Bond";
+console.log(name);
 
+    //basic string
+var testString = "He's in PWA1";
+console.log("Example 1: ", testString);
 
     //string w/ escape characters " \ "
+var testString = "I need some \"quotes\" to be here."
+console.log("Example 2: ", testString);
 
+var testString = "He\'s in PWA1";
+console.log("Example 3: ", testString);
 
     //string w/ escape characters and mixed single/double quotes
-
+var testString = "He\'s in " + "\"PWA1\""; // I could have used '"PWA1"' or "'PWA1'"
+console.log("Example 4: ", testString);
 
     //this example shows that all the "phase" vars above were overwritten
-
-
+var num = 3;
+var testString = "He\'s in PWA1 " + num;
+console.log("Example 5: ", testString);
 
 // numbers (definition, concatenation +, math, numbers & strings)
 console.log('------ numbers ----------');
 
     // arithmetic operators:  +, -, /, *, % (modulo)
 
+    // ---MINE---
+    //var y=123e5;      // 12300000
+    //var x=123e-5;     // 0.00123
+    //var pi=3.14;      // pi
+
 
     //basic math
+var counter = 10;
+console.log("basic math: ", counter + 1);
+console.log("basic math: ", counter);
 
 
     //quick operations with "assignment operator" +=, -=, *=, /=, %=
     //one example below, can show more examples with other assignment operators
 
+var num1 = 10;
+var num2 = 5;
+num1 += num2;
+console.log("+=: ", num1);
 
     //increment or decrement numbers by 1 with ++ or --
+var myNum = 5;
+console.log("myNum = ", myNum);
+
+myNum++;
+console.log("myNum = ", myNum);
+
+myNum--;
+console.log("myNum = ", myNum);
 
     //this decrements right before it is being used
 
+var num = 10;
+--num;
+console.log("--counter: ", num);
+
     //this decrements after it is used
+num--;
+console.log("counter--: ", num);
 
     //comment out the above example
     //this decrements after it is being used as well
 
 
     //add a number to a string is always a string
-
+var myStr = "6" +2;
+console.log("Number + Strings: ", myStr);
 
     //other math operations will result in a number
-
+var myStr = "6" / 2;
+console.log("Number + Strings: ", myStr);
 
     //order of operations: ( ), *, /, +, -
-
+var aNum = 4 + (6 * 5 - 10) / 5;
+console.log("Order of operation: " + aNum);
 
     //modulo example
-
+var num01 = 10;
+var num02 = 3;
+console.log("Remainder: ", num1%num2);
 
 // arrays: (definition, indexing, getter/setter)
 console.log('------ arrays ----------');
@@ -203,7 +265,8 @@ console.log('------ conditionals ----------');
         a true or false boolean
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
-
+var myVar1 = 5 > 3;
+console.log("is 5 greater than 3? ", myVar1);
 
 
 /*
@@ -211,6 +274,9 @@ console.log('------ conditionals ----------');
      > < >=  <=  !== ! ==  ===
      Sort: A-Za-z
 
+            = is assigning...
+            == is comparing...
+            === is comparing string vs value...
 
     A conditional is a block of code that only runs if the condition is
         true (example, state switching)
@@ -220,7 +286,11 @@ console.log('------ conditionals ----------');
             //block of code or ‘actions’
          };
 */
-
+if (5 > 3){
+    // execute code here
+    // switched single quotes and double quotes for appearances sake
+    console.log('"5 > 3", True!');
+}
 
 
 /*
@@ -234,6 +304,14 @@ console.log('------ conditionals ----------');
 */
 
     // == performs a loose check of two values
+if ("1" == 1){
+    // switched single quotes and double quotes for appearances sake
+    console.log('"1" == 1, True');
+}
+
+if ("1" !== 1){
+    console.log('"1" !== 1, True')
+}
 
 
 
@@ -248,15 +326,50 @@ console.log('------ conditionals ----------');
 
  ================================================================
  */
+if ("1" === 1) {
+    console.log('"1" === 1, True');
+}else {
+    console.log('"1" === 1, False');
+}
 
+if ("a" < "b"){
+    //TRUE: run code
+    console.log("a is less than b");
+}else{
+    //FALSE: run code
+    console.log("if-else: the 'IF' statement is false");
+}
 
+if ("a" === "b"){
+    //TRUE: run code
+    console.log("a is less than b");
+}else{
+    //FALSE: run code
+    console.log("if-else: the 'IF' statement is false");
+}
 
     //if - else if - else (allows for multiple options)
+if("a" > "b"){
+    console.log("a is less than b");
+}else if ("a" > "c"){
+    console.log("a is less than c");
+}else if ("a" > "d"){
+    console.log("a is less than d");
+}else{
+    console.log("if - else if: all others returned false");
+}
+//nested conditional statement
+if ("a" !== "a"){
 
+    if ("b" === "b"){
+        console.log("In Nested if-else / b === b: True");
+    }else{
+        console.log("b" !== "b");
+    }
 
-
-    //nested conditional statement
-
+}else{
+    console.log("nested conditional: 1st IF returned false");
+}
 
 
 /* ==============================================================
@@ -276,16 +389,26 @@ console.log('------ conditionals ----------');
  */
 
     //AND logical operator
-
+if ((1 === 1) && ("hi" === "hi")){
+    console.log("&& logical operator: both sides = true");
+}
 
     //OR logical operator
-
+if ((1 === 2) || (3 === 3)){
+    console.log("|| logical operator: one or both sides = True");
+}
 
     // ! NOT logical operator
-
+if (!(1 === 2) && ("hi" === "hi")){
+    console.log("&& logical operator: one sides = False but is True due to the ! not operator");
+}
 
     // all logical operators with order of operations
-
+if (5 > 2 || (1 === 1 && !(2 == "2" || 5<2))){
+    console.log("Logical operator: true");
+}else{
+    console.log("Logical operator: false");
+}
 
 
 /*******************************************
@@ -300,8 +423,21 @@ console.log('------ conditionals ----------');
     1. learn if - else
  ********************************************/
 
+var weather = "Cloudy";
+
+if(weather === "Sunny"){
+    console.log("bobsMood is happy");
+}else{
+    console.log("bobsMood is sad");
+}
 
 
+if(weather === "Sunny"){
+    bobsMood = "happy";
+}else{
+    bobsMood = "sad";
+}
+console.log("If-Else weather: ", bobsMood);
 
 /*******************************************
  STUDENT ACTIVITY 4:
@@ -319,6 +455,31 @@ console.log('------ conditionals ----------');
     3.  console.log the results after each conditional
  ********************************************/
 
+var waves = 5;
+var weather = "Overcast";
+var Mood;
+
+if (weather === "sunny"){
+    if (waves === 10){
+        Mood = "PUMPED";
+    }else if ((waves <= 9) && (waves >= 5)){
+        Mood = "mellow";
+    }else{
+        Mood = "bummed";
+    }
+}else if (weather === "Overcast") {
+    if ((waves <= 10) && (waves >= 7)) {
+        Mood = "jackedUP";
+    } else if ((waves <= 6) && (waves >= 3)) {
+        Mood = "totally bummed";
+    } else if ((waves <= 2) && (waves > 0)){
+        Mood = "not happy";
+    } else{
+        Mood = "sad";
+    }
+}
+
+console.log("If-Else weather: ", Mood);
 
 
 
@@ -334,7 +495,9 @@ console.log('------ conditionals ----------');
     - is the same as this:
        myVar = a<b ? a : b;
 
-    condition ? true : false;
+    ***************************************************
+    **********   condition ? true : false;   **********
+    ***************************************************
     - the conditional operator ?: is a condensed version of an IF statement, which
         returns a statement based on a condition being true or false
     - condition = conditional statement like "a < b"
@@ -342,6 +505,12 @@ console.log('------ conditionals ----------');
     - : = false (perform the new statement after the :)
  */
 
+var weather = "Sunny";
+var mood = (weather === "Sunny" ? "Happy" : "sad");
+console.log("mood: ", mood);
+
+var smile = false;
+console.log("I\'m " + ( smile === true ? "happy" : "sad" ) + "!!");
 
 
 /*******************************************
@@ -355,6 +524,12 @@ console.log('------ conditionals ----------');
         - else student1 = 'sad'
     4.  console.log the results
  ********************************************/
+
+var temp = 62;
+var weather = "cloudy";
+
+student1 = (weather === "Sunny" ? "Happy" : ((temp >= 61) && (temp <= 85) ? "content" : "sad"));
+console.log("Nested ternary weather: ", student1);
 
 
 
